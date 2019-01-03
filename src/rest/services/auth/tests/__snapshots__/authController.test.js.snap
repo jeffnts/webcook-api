@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth tests It should authenticate the user when it is passed the correct userName and password 1`] = `Object {}`;
+
+exports[`Auth tests It should authenticate the user when it is passed the wrong password 1`] = `Object {}`;
+
+exports[`Auth tests It should authenticate the user when it is passed the wrong userName  1`] = `Object {}`;

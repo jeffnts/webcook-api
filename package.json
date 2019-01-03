@@ -1,0 +1,51 @@
+{
+  "name": "webCook-backend",
+  "version": "1.0.0",
+  "description": "A simple web API for a recipe management app.",
+  "main": "app.js",
+  "repository": "https://github.com/jeffnts/webcook-backend.git",
+  "author": "Jefferson Nascimento Teixeira de Souza",
+  "license": "MIT",
+  "scripts": {
+    "start": "node build/app.js",
+    "dev": "node_modules/.bin/nodemon --exec babel-node src/app.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "babel -d ./build ./src -s",
+    "build": "npm run clean & npm run build-server",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "save_doc": "yaml2json -s -w ./api/swagger/swagger.yaml",
+    "edit_doc": "swagger project edit",
+    "doc": "yarn edit_doc | yarn save_doc "
+  },
+  "dependencies": {
+    "apollo-server-koa": "^2.3.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^6.0.0",
+    "graphql": "^14.0.0",
+    "graphql-tools": "^4.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-convert": "^1.2.0",
+    "koa-cors": "^0.0.16",
+    "koa-mount": "^3.0.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "merge-graphql-schemas": "^1.5.7",
+    "mongoose": "^5.2.4",
+    "passport": "^0.4.0",
+    "swagger-ui-koa": "^0.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "jest": "^23.5.0",
+    "nodemon": "^1.18.3",
+    "supertest": "^3.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

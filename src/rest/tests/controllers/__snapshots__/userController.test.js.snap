@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users Tests DELETE method It should not delete a user with the wrong ID passed as parameter. 1`] = `Object {}`;
+
+exports[`Users Tests DELETE method It should return a specific user according the ID passed as parameter. 1`] = `Object {}`;
+
+exports[`Users Tests GET Method with no users registered. It should return no one user. 1`] = `Object {}`;
+
+exports[`Users Tests GET method It should not return a user with the wrong ID passed as parameter. 1`] = `Object {}`;
+
+exports[`Users Tests GET method It should return a specific user according the ID passed as parameter. 1`] = `Object {}`;
+
+exports[`Users Tests GET method It should return all users. 1`] = `Object {}`;
+
+exports[`Users Tests POST method It should create a new user. 1`] = `Object {}`;
+
+exports[`Users Tests POST method It should not create a new user with  a already exists username. 1`] = `Object {}`;
+
+exports[`Users Tests POST method It should not create a new user with the same email. 1`] = `Object {}`;
+
+exports[`Users Tests PUT method It should not update a user with the wrong ID passed as parameter. 1`] = `Object {}`;
+
+exports[`Users Tests PUT method It should update a specific user according the ID passed as parameter. 1`] = `Object {}`;
