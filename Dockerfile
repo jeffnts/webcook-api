@@ -6,6 +6,8 @@ COPY package*json ./
 RUN npm install --quiet
 
 COPY . .
+RUN npm run build
+RUN npm run cleanSrc
 
 EXPOSE 8000
 

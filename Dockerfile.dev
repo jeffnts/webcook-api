@@ -1,12 +1,12 @@
 FROM node:10.14.2-alpine
 
-WORKDIR /usr/api
+WORKDIR /usr/api/dev
 
 COPY package*json ./
 RUN npm install --quiet
+RUN npm install -g nodemon
 
 COPY . .
-RUN npm run build
 
 EXPOSE 8000
 

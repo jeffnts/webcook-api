@@ -14,4 +14,10 @@ export default `
     users: [User!]!
     user(id: ID!): User!
   }
+  
+  type Mutation {
+    createUser(name: String!): User
+    updateUser(name: String!): User
+    deleteUser(name: String!): User
+  }
 `;

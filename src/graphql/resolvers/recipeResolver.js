@@ -2,7 +2,6 @@ import recipeModel from '../../models/recipeModel'
 
 export default {
   Query: {
-    //All recipes
     recipes: async () =>{
       try{
         return await recipeModel.find()
@@ -11,7 +10,7 @@ export default {
 
       }
     },
-    recipe: async(args, {id}) =>{
+    recipe: async(parent, {id}) =>{
       try{
         return await recipeModel.findById(id)
       }
@@ -19,6 +18,35 @@ export default {
 
       }
 
+    }
+  },
+  Mutation:{
+    createRecipe: async(parent, args) =>{
+
+      try{
+
+      }
+      catch(err){
+
+      }
+    },
+    updateRecipe: async(parent, args) =>{
+
+      try{
+
+      }
+      catch(err){
+
+      }
+    },
+    deleteRecipe: async(parent, args) =>{
+
+      try{
+
+      }
+      catch(err){
+
+      }
     }
   }
 }
