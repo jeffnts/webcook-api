@@ -1,0 +1,15 @@
+version: "3"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: nodemon -L --exec babel-node src/app.js
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/usr/api/dev
+
+
+
+
