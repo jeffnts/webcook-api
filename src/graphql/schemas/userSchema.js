@@ -1,4 +1,13 @@
 export default `
+  
+  input UserInput {    
+    name: String
+    userName: String    
+    email: String   
+    role: String
+    photo: String      
+  }
+  
   type User {
     id: ID!
     name: String!
@@ -6,8 +15,7 @@ export default `
     email: String!    
     role: String!
     photo: String
-    recipes:[Recipe!]! 
-    
+    recipes:[Recipe!]!     
   }
   
   type Query {  
@@ -16,8 +24,8 @@ export default `
   }
   
   type Mutation {
-    createUser(name: String!): User
-    updateUser(name: String!): User
-    deleteUser(name: String!): User
+    createUser(name: String!, userName: String!, email: String!, password: String!): User
+    updateUser(input: UserInput): User
+    deleteUser(id: String!): String
   }
 `;

@@ -42,10 +42,14 @@ app.use(authRouter.routes())
 app.use(recipeRouter.routes())
 app.use(userRouter.routes())
 
+
+// import {isAuthenticated} from './rest/services/auth/authController'
+// app.use(isAuthenticated)
+
 //GraphQL Settings
 const typeDefs = mergeTypes(fileLoader(path.join(__dirname, './graphql/schemas')))
 const resolvers = mergeResolvers(fileLoader(path.join(__dirname, './graphql/resolvers')))
-const server = new ApolloServer({ typeDefs, resolvers })
+const server = new ApolloServer({typeDefs, resolvers, context:({ ctx }) => ({ ctx }) })
 server.applyMiddleware({ app })
 
 //Swagger settings

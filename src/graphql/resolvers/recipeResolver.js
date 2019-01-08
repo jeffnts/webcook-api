@@ -21,7 +21,7 @@ export default {
     }
   },
   Mutation:{
-    createRecipe: async(parent, args) =>{
+    createRecipe: async(parent, {input}) =>{
 
       try{
 

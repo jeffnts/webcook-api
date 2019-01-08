@@ -18,14 +18,14 @@ module.exports = {
                 return ctx.message = "Nome de usuário já está sendo usado."
             }
 
-            const user = await userModel.create({
+             await userModel.create({
 
                 name: ctx.request.body.name,
                 userName: ctx.request.body.userName,
                 email: ctx.request.body.email,
                 password: ctx.request.body.password
 
-            });
+            })
 
             ctx.status = 201;
             ctx.message = "Usuário criado com sucesso!"
