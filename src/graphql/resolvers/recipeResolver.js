@@ -21,9 +21,17 @@ export default {
         return err
       }
     },
-    recipe: async(parent, {id}, {ctx}) =>{
+    recipe: async(parent, args, {ctx}) =>{
       try{
-        return await recipeModel.findById(id)
+        const {token} = ctx.request.headers
+        if(token === undefined) throw new Error("Usuário não autenticado!")
+        const { id } = await jwt.verify(token.trim(), process.env.SECRET_KEY)
+
+        const recipe = await recipeModel.findById(args.id)
+
+        if( !(recipe.user == id)) throw new Error ("Usuário não autorizado!")
+
+        return recipe
       }
       catch(err){
         return err
