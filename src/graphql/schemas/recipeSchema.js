@@ -1,4 +1,27 @@
 export default `
+  input RecipeInputCreate{
+    name: String!
+    description: String!
+    photo: String
+    video: String
+    categories: [String]
+    ingredients: [String!]!
+    prepareSteps: [String!]!
+    prepareTime: Int
+    portions: Int  
+  } 
+  input RecipeInputUpdate{
+    name: String
+    description: String
+    photo: String
+    video: String
+    categories: [String]
+    ingredients: [String]
+    prepareSteps: [String]
+    prepareTime: Int
+    portions: Int  
+  }
+
   type Recipe{
     id: ID!
     name: String!
@@ -7,7 +30,7 @@ export default `
     video: String
     categories: [String]
     ingredients: [String!]!
-    prepareSteps: [String]
+    prepareSteps: [String!]!
     prepareTime: Int
     portions: Int  
     
@@ -19,9 +42,9 @@ export default `
   }
   
   type Mutation{
-    createRecipe(name:  String!): Recipe
-    updateRecipe(name:  String!): Recipe
-    deleteRecipe(name:  String!): Recipe
+    createRecipe(input: RecipeInputCreate!): Recipe
+    updateRecipe(id: String!, input: RecipeInputUpdate!): Recipe
+    deleteRecipe(id:  String!): String
   }
     
 `

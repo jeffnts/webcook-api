@@ -11,7 +11,7 @@ export default {
         const { id } = await jwt.verify(token.trim(), process.env.SECRET_KEY)
 
         const user = await userModel.findById(id)
-        console.log(user)
+
         const users = await userModel.find()
 
         if(user.role === 'admin'){

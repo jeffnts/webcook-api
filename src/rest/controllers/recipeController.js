@@ -5,10 +5,9 @@ import jwt from 'jsonwebtoken'
 
 module.exports = {
   create:async (ctx) =>{
-    const {token} = ctx.request.headers
-    const { id } = await jwt.verify(token.trim(), process.env.SECRET_KEY)
-
     try{
+      const {token} = ctx.request.headers
+      const { id } = await jwt.verify(token.trim(), process.env.SECRET_KEY)
 
       const user = await userModel.findById(id)
       if (!user){
@@ -40,6 +39,7 @@ module.exports = {
       try{
         const {token} = ctx.request.headers
         const { id } = await jwt.verify(token.trim(), process.env.SECRET_KEY)
+
 
         const recipes = await recipeModel.find().where({user: id})
 
