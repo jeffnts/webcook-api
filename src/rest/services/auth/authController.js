@@ -12,7 +12,7 @@ module.exports = {
 
             if(await user === null){
                 ctx.status = 404
-                return ctx.message = 'Usuáio não encontrado!'
+                return ctx.message = 'Usuário não encontrado!'
             }
 
             const authenticated = await user.authenticate(password)
