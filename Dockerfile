@@ -9,6 +9,7 @@ COPY . .
 RUN npm run build
 RUN npm run cleanSrc
 
-EXPOSE 8000
+#Commented becouse expose is not suported by heroku
+#EXPOSE 8000
 
 CMD ["npm", "start"]
