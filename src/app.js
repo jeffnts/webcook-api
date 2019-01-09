@@ -1,7 +1,7 @@
-if (process.env.NODE_ENV = 'development'){
-  require('dotenv').config()
-}
-
+// if (process.env.NODE_ENV === 'development'){
+//   require('dotenv').config()
+// }
+require('dotenv').config()
 import Koa from 'koa'
 import cors from 'koa-cors'
 import bodyParser  from 'koa-bodyparser'
@@ -71,4 +71,4 @@ if (!module.parent) {
 }
 
 
-export default  app
+module.exports = app
