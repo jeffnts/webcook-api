@@ -4,23 +4,22 @@ exports[`Users Tests DELETE method It should delete a logged user according the 
 
 exports[`Users Tests DELETE method It should not delete a user if is not logged. 1`] = `Object {}`;
 
-exports[`Users Tests DELETE method It should not delete a user with the wrong ID passed as parameter. 1`] = `Object {}`;
-
-exports[`Users Tests DELETE method It should return a specific user according the ID passed as parameter. 1`] = `Object {}`;
-
-exports[`Users Tests GET Method with no users registered. It should return no one user. 1`] = `Object {}`;
-
 exports[`Users Tests GET method It should not return a user if he is not logged. 1`] = `Object {}`;
-
-exports[`Users Tests GET method It should not return a user with the wrong ID passed as parameter. 1`] = `Object {}`;
 
 exports[`Users Tests GET method It should not return all users if the user is not a admin. 1`] = `Object {}`;
 
-exports[`Users Tests GET method It should return a logged user according the tokken passed as parameter in the Header. 1`] = `Object {}`;
-
-exports[`Users Tests GET method It should return a specific user according the ID passed as parameter. 1`] = `Object {}`;
-
-exports[`Users Tests GET method It should return all users. 1`] = `Object {}`;
+exports[`Users Tests GET method It should return a logged user according the tokken passed as parameter in the Header. 1`] = `
+Object {
+  "__v": 0,
+  "_id": "ObjectId",
+  "email": "jhon@email.com",
+  "name": "Jhon",
+  "photo": "avatar",
+  "recipes": Array [],
+  "role": "user",
+  "userName": "jhon",
+}
+`;
 
 exports[`Users Tests POST method It should create a new user. 1`] = `Object {}`;
 
@@ -28,14 +27,6 @@ exports[`Users Tests POST method It should not create a new user with  a already
 
 exports[`Users Tests POST method It should not create a new user with the same email. 1`] = `Object {}`;
 
-exports[`Users Tests POST method It should not create a new user with the same email. 2`] = `Object {}`;
-
 exports[`Users Tests PUT method It should not update a user if he is not logged. 1`] = `Object {}`;
 
-exports[`Users Tests PUT method It should not update a user with the wrong ID passed as parameter. 1`] = `Object {}`;
-
 exports[`Users Tests PUT method It should update a logged user according the token passed as parameter in the Header. 1`] = `Object {}`;
-
-exports[`Users Tests PUT method It should update a logged user according the token passed as parameter in the Header. 2`] = `Object {}`;
-
-exports[`Users Tests PUT method It should update a specific user according the ID passed as parameter. 1`] = `Object {}`;
