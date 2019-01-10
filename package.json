@@ -13,7 +13,7 @@
     "cleanSrc": "rm -rf src",
     "build-server": "babel -d ./build ./src -s",
     "build": "npm run clean & npm run build-server",
-    "test": "jest --runInBand -u",
+    "test": "jest --runInBand",
     "test:watch": "jest --watch",
     "save_doc": "yaml2json -s -w ./api/swagger/swagger.yaml",
     "edit_doc": "swagger project edit",

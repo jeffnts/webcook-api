@@ -1,7 +1,9 @@
 language: node_js
 node_js:
   - "10.14.2"
-deploy:
-  provider: heroku
-  app: webcook-api
-  on: develop
+  - "8"
+  - "7"
+#deploy:
+#  provider: heroku
+#  app: webcook-api
+#  on: develop
