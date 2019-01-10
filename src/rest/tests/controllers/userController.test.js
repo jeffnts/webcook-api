@@ -77,8 +77,8 @@ describe('Users Tests', () => {
 
         test('It should not return all users if the user is not a admin.', async () => {
 
-          const tokenRequest = await request.post('/api/auth/login').send(userLogin)
-          const token = tokenRequest.body.token
+          let tokenRequest = await request.post('/api/auth/login').send(userLogin)
+          let token = tokenRequest.body.token
           const res = await request.get('/api/users').set('token', token)
           expect(sanitizeTestObject(res.body)).toMatchSnapshot()
           expect(res.status).toEqual(403)
@@ -94,8 +94,8 @@ describe('Users Tests', () => {
         });
         test('It should return a logged user according the tokken passed as parameter in the Header.', async () => {
 
-          const tokenRequest = await request.post('/api/auth/login').send(userLogin)
-          const token = tokenRequest.body.token
+          let tokenRequest = await request.post('/api/auth/login').send(userLogin)
+          let token = tokenRequest.body.token
           const res = await request.get('/api/user').set('token', token)
           expect(sanitizeTestObject(res.body)).toMatchSnapshot()
           expect(res.status).toEqual(200)
@@ -113,8 +113,8 @@ describe('Users Tests', () => {
         });
         test('It should update a logged user according the token passed as parameter in the Header.', async () => {
 
-          const tokenRequest = await request.post('/api/auth/login').send(userLogin)
-          const token = tokenRequest.body.token
+          let tokenRequest = await request.post('/api/auth/login').send(userLogin)
+          let token = tokenRequest.body.token
           const res = await request.put('/api/user').send({'name': 'Jhon Doe'}).set('token', token)
           expect(sanitizeTestObject(res.body)).toMatchSnapshot()
           expect(res.status).toEqual(200)
@@ -132,8 +132,8 @@ describe('Users Tests', () => {
         });
         test('It should delete a logged user according the token passed as parameter in the Header.', async () => {
 
-          const tokenRequest = await request.post('/api/auth/login').send(userLogin)
-          const token = tokenRequest.body.token
+          let tokenRequest = await request.post('/api/auth/login').send(userLogin)
+          let token = tokenRequest.body.token
           const res = await request.delete('/api/user').set('token', token)
           expect(sanitizeTestObject(res.body)).toMatchSnapshot()
           expect(res.status).toEqual(204)
